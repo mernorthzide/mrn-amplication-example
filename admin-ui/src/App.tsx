@@ -25,6 +25,14 @@ import { ProductList } from "./product/ProductList";
 import { ProductCreate } from "./product/ProductCreate";
 import { ProductEdit } from "./product/ProductEdit";
 import { ProductShow } from "./product/ProductShow";
+import { CarList } from "./car/CarList";
+import { CarCreate } from "./car/CarCreate";
+import { CarEdit } from "./car/CarEdit";
+import { CarShow } from "./car/CarShow";
+import { CarModelList } from "./carModel/CarModelList";
+import { CarModelCreate } from "./carModel/CarModelCreate";
+import { CarModelEdit } from "./carModel/CarModelEdit";
+import { CarModelShow } from "./carModel/CarModelShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -85,6 +93,20 @@ const App = (): React.ReactElement => {
           edit={ProductEdit}
           create={ProductCreate}
           show={ProductShow}
+        />
+        <Resource
+          name="Car"
+          list={CarList}
+          edit={CarEdit}
+          create={CarCreate}
+          show={CarShow}
+        />
+        <Resource
+          name="CarModel"
+          list={CarModelList}
+          edit={CarModelEdit}
+          create={CarModelCreate}
+          show={CarModelShow}
         />
       </Admin>
     </div>
